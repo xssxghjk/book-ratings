@@ -12,12 +12,23 @@ module.exports = {
     },
     keyframes: {
       shake: {
-        "0% 50% 100%": { transform: "translateX(-4px)" },
-        "25% 75%": { transform: "translateX(4px)" },
+        "0%, 100%": { transform: "translateX(0)" },
+        "10%, 30%, 50%, 70%": {
+          transform: "translateX(-5px)",
+        },
+        "20%, 40%, 60% ": {
+          transform: "translateX(5px)",
+        },
+        "80%": {
+          transform: "translateX(4px)",
+        },
+        "90%": {
+          transform: "translateX(-4px)",
+        },
       },
     },
     animation: {
-      shake: "shake 1s ease-in-out infinite",
+      shake: "shake .7s ease 0s 1 normal forwards",
     },
   },
 };
