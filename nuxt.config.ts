@@ -4,4 +4,11 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
+  app: {
+    head: {
+      bodyAttrs: {
+        class: "bg-slate-100 dark:bg-slate-800",
+      },
+    },
+  },
 });
