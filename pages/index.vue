@@ -30,6 +30,7 @@ const submitSearch = () => {
       <input
         class="w-full sm:w-80 p-3 rounded-lg font-mono placeholder:font-extralight bg-transparent text-slate-600 placeholder:text-slate-400 dark:text-slate-200 dark:placeholder:text-slate-500"
         placeholder="Search"
+        autocomplete="off"
         v-model="searchQuery"
         @keyup.enter="submitSearch"
       />
