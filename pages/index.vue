@@ -11,9 +11,7 @@ const triggerShake = () => {
     isShaking.value = false;
   }, 1000);
 };
-const query = useSearchQuery("lord+of+the+rings");
-console.log(query.isLoading);
-console.log(query.data);
+
 const submitSearch = () => {
   if (!searchQuery.value) {
     triggerShake();
