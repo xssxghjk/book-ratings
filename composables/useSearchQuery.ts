@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const useSearchQuery = (query: string) => {
   return useQuery(["books", "search", query], {
-    queryFn: () => {
+    queryFn: () =>
       axios({
         method: "get",
         baseURL: "https://openlibrary.org",
@@ -11,7 +11,6 @@ export const useSearchQuery = (query: string) => {
         params: {
           q: query,
         },
-      });
-    },
+      }).then((response) => response.data),
   });
 };
